@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://TWOJ-ADRES-STRONY/">
 <meta name="author" content="Ania Bajorek">
 
-<!-- Podgląd przy udostępnianiu (Messenger, Instagram, WhatsApp, LinkedIn...) -->
+<!-- Podgląd przy udostępnianiu -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ania Bajorek">
 <meta property="og:title" content="Ania Bajorek — Photographer &amp; Director">
@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="Photographer and director based in Warsaw. Commercial, music video, social campaigns and photography projects.">
 <meta name="twitter:image" content="https://TWOJ-ADRES-STRONY/images/commercial-01.jpg">
 
-<!-- Dane dla Google: kim jesteś -->
+<!-- Dane dla Google -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,13 +31,18 @@
   "url": "https://TWOJ-ADRES-STRONY/",
   "image": "https://TWOJ-ADRES-STRONY/images/commercial-01.jpg",
   "email": "mailto:annabajorek@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Warsaw", "addressCountry": "PL" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Warsaw",
+    "addressCountry": "PL"
+  },
   "sameAs": [
     "https://vimeo.com/aniabajorek",
     "https://www.instagram.com/ania_bajorek/"
   ]
 }
 </script>
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>A</text></svg>">
 
 <style>
@@ -45,7 +50,6 @@
 html { scroll-behavior: smooth; }
 
 :root {
-    /* wysokość zdjęć i filmów: do 1369 px, ale nie więcej niż 85% okna */
     --media-h: min(1369px, 85vh);
 }
 
@@ -58,32 +62,116 @@ body {
     line-height: 1.25;
 }
 
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; }
-a:focus-visible, button:focus-visible { outline: 1px solid #111; outline-offset: 3px; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 1px solid #111;
+    outline-offset: 3px;
+}
 
 /* MENU */
-.menu { position: fixed; left: 25px; top: 25px; width: 190px; z-index: 10; }
-.name { margin: 0 0 35px; font-size: inherit; font-weight: normal; }
-.menu-section { margin-bottom: 22px; }
-.menu-toggle { display: block; margin-bottom: 5px; cursor: pointer; }
-.submenu { display: none; padding-left: 15px; }
-.menu-section.active .submenu { display: block; }
-.submenu a { display: block; margin-bottom: 3px; }
-.submenu a.current, .menu-toggle.current, .name a.current { text-decoration: underline; }
+.menu {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    width: 190px;
+    z-index: 10;
+}
 
-/* VIMEO / INSTAGRAM — lewy dolny róg */
-.social { position: fixed; left: 25px; bottom: 25px; display: flex; gap: 16px; }
-.social a { display: block; line-height: 0; }
-.social a:hover { text-decoration: none; opacity: .55; }
-.social svg { width: 22px; height: 22px; display: block; }
+.name {
+    margin: 0 0 35px;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+.menu-section {
+    margin-bottom: 22px;
+}
+
+.menu-toggle {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.menu-section.active .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.submenu a.current,
+.menu-toggle.current,
+.name a.current {
+    text-decoration: underline;
+}
+
+/* VIMEO / INSTAGRAM */
+.social {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    display: flex;
+    gap: 16px;
+}
+
+.social a {
+    display: block;
+    line-height: 0;
+}
+
+.social a:hover {
+    text-decoration: none;
+    opacity: .55;
+}
+
+.social svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
 
 /* TREŚĆ */
-main { margin-left: 240px; padding: 25px 30px 100px 0; }
-.view { display: none; }
-.view.active { display: block; }
-.project-title { margin: 0 0 18px; font-size: 18px; font-weight: normal; }
-.project-desc { max-width: 600px; margin: -6px 0 24px; white-space: pre-line; }
+main {
+    margin-left: 240px;
+    padding: 25px 30px 100px 0;
+}
+
+.view {
+    display: none;
+}
+
+.view.active {
+    display: block;
+}
+
+.project-title {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.project-desc {
+    max-width: 600px;
+    margin: -6px 0 24px;
+    white-space: pre-line;
+}
 
 /* GALERIA POZIOMO */
 .project-images {
@@ -94,6 +182,7 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
     overflow-y: hidden;
     padding-bottom: 5px;
 }
+
 .project-images img,
 .project-images video {
     display: block;
@@ -104,7 +193,16 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
     object-fit: contain;
     background: #f4f4f4;
 }
-.project-images img { min-width: 20vw; }
+
+.project-images img {
+    min-width: 20vw;
+}
+
+.project-images video {
+    min-width: 0;
+    background: #000;
+}
+
 .project-images iframe {
     display: block;
     flex: none;
@@ -115,19 +213,48 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
     background: #000;
 }
 
-.contact { max-width: 500px; font-size: 18px; }
-.note { max-width: 500px; font-size: 18px; }
+.contact {
+    max-width: 500px;
+    font-size: 18px;
+}
+
+.note {
+    max-width: 500px;
+    font-size: 18px;
+}
 
 @media (max-width: 700px) {
-    :root { --media-h: min(1369px, 60vh); }
-    .menu { position: relative; left: auto; top: auto; width: auto; padding: 20px; }
-    .name { margin-bottom: 25px; }
-    .social { position: static; margin-top: 10px; }
-    main { margin-left: 0; padding: 20px; }
+    :root {
+        --media-h: min(1369px, 60vh);
+    }
+
+    .menu {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        padding: 20px;
+    }
+
+    .name {
+        margin-bottom: 25px;
+    }
+
+    .social {
+        position: static;
+        margin-top: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
+    html {
+        scroll-behavior: auto;
+    }
 }
 </style>
 </head>
@@ -136,10 +263,13 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
 
 <nav class="menu" aria-label="Menu główne">
 
-    <h1 class="name"><a href="#" id="home-link">ANIA BAJOREK</a></h1>
+    <h1 class="name">
+        <a href="#" id="home-link">ANIA BAJOREK</a>
+    </h1>
 
     <div class="menu-section">
         <a href="#" class="menu-toggle">Film</a>
+
         <div class="submenu">
             <a href="#commercial">Commercial</a>
             <a href="#music-video">Music video</a>
@@ -149,6 +279,7 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
 
     <div class="menu-section">
         <a href="#" class="menu-toggle">Photography</a>
+
         <div class="submenu">
             <a href="#commercial-photo">Commercial folio</a>
             <a href="#pocket-pieces">Pocket Pieces</a>
@@ -161,16 +292,50 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
         </div>
     </div>
 
-    <div class="menu-section"><a href="#prints" class="menu-toggle">Prints</a></div>
-    <div class="menu-section"><a href="#contact" class="menu-toggle">Contact</a></div>
+    <div class="menu-section">
+        <a href="#prints" class="menu-toggle">Prints</a>
+    </div>
+
+    <div class="menu-section">
+        <a href="#contact" class="menu-toggle">Contact</a>
+    </div>
 
     <div class="social">
-        <a href="https://vimeo.com/aniabajorek" target="_blank" rel="noopener noreferrer" aria-label="Vimeo" title="Vimeo">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z"/></svg>
+
+        <a href="https://vimeo.com/aniabajorek"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Vimeo"
+           title="Vimeo">
+
+            <svg viewBox="0 0 24 24"
+                 fill="currentColor"
+                 aria-hidden="true">
+
+                <path d="M23.9765 6.4168c-.105 2.338-1.739 5.5429-4.894 9.6088-3.2679 4.247-6.0258 6.3699-8.2898 6.3699-1.409 0-2.578-1.294-3.553-3.881l-1.9179-7.1138c-.719-2.584-1.488-3.878-2.312-3.878-.179 0-.806.378-1.8809 1.132l-1.129-1.457a315.06 315.06 0 003.501-3.1279c1.579-1.368 2.765-2.085 3.5539-2.159 1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.5069.5389 2.45 1.1309 3.674 1.7759 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z"/>
+            </svg>
         </a>
-        <a href="https://www.instagram.com/ania_bajorek/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+
+        <a href="https://www.instagram.com/ania_bajorek/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram"
+           title="Instagram">
+
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1"
+                        fill="currentColor"
+                        stroke="none"/>
+            </svg>
         </a>
+
     </div>
 
 </nav>
@@ -178,183 +343,639 @@ main { margin-left: 240px; padding: 25px 30px 100px 0; }
 <main id="content">
 
     <div class="view" id="prints">
+
         <h2 class="project-title">Prints</h2>
-        <p class="note">Prints are available on request.<br>
-            <a href="mailto:annabajorek@gmail.com">annabajorek@gmail.com</a></p>
+
+        <p class="note">
+            Prints are available on request.<br>
+            <a href="mailto:annabajorek@gmail.com">
+                annabajorek@gmail.com
+            </a>
+        </p>
+
     </div>
 
     <div class="view" id="contact">
+
         <div class="contact">
-            <p>Ania Bajorek<br>Photographer &amp; Director</p>
-            <p>Warsaw, Poland</p>
-            <p><a href="mailto:annabajorek@gmail.com">annabajorek@gmail.com</a></p>
-            <p><a href="https://vimeo.com/aniabajorek" target="_blank" rel="noopener noreferrer">Vimeo</a><br>
-               <a href="https://www.instagram.com/ania_bajorek/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+
+            <p>
+                Ania Bajorek<br>
+                Photographer &amp; Director
+            </p>
+
+            <p>
+                Warsaw, Poland
+            </p>
+
+            <p>
+                <a href="mailto:annabajorek@gmail.com">
+                    annabajorek@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://vimeo.com/aniabajorek"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Vimeo
+                </a>
+                <br>
+
+                <a href="https://www.instagram.com/ania_bajorek/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </p>
+
         </div>
+
     </div>
 
 </main>
 
 <script>
+
 /* =========================================================
    PROJEKTY
-   prefix + n  -> images/<prefix>-01.jpg ... images/<prefix>-NN.jpg
-   Chcesz dodać film albo inne nazwy plików? Użyj "files":
-   files: ["images/a.jpg", "https://vimeo.com/123456789", "images/c.jpg"]
-   (linki z Vimeo wyświetlą się jako odtwarzacz, pliki .mp4 / .webm / .mov jako wideo)
 
-   Opis projektu (pokazuje się nad zdjęciami): dopisz desc: "Tekst opisu",
-   np.  { id: "zodrak", title: "Zodrak", prefix: "zodrak", n: 2, desc: "Tekst opisu." },
-   Brak "desc" = brak opisu.
+   FILMY:
+   Commercial / Music video / Social campaign
+   mogą korzystać z bezpośrednich linków pCloud.
+
+   Przykład:
+
+   files: [
+       "https://filedn.eu/...../film.mp4",
+       "https://filedn.eu/...../film2.mp4"
+   ]
+
+   ZDJĘCIA:
+   pozostałe projekty nadal korzystają z:
+
+   prefix + n
+   czyli:
+   images/pocket-pieces-01.jpg
+   images/pocket-pieces-02.jpg
+   itd.
+
+   Możesz też użyć "files" dla zdjęć, jeśli kiedyś będzie taka potrzeba.
+
    ========================================================= */
+
+
 const PROJECTS = [
-    { id: "commercial",        title: "Commercial",                prefix: "film-commercial", n: 4 },
-    { id: "music-video",       title: "Music video",               prefix: "music-video",     n: 2 },
-    { id: "social",            title: "Social campaign",           prefix: "social",          n: 3 },
-    { id: "commercial-photo",  title: "Commercial folio",          prefix: "commercial",      n: 4 },
-    { id: "la-casa-violeta",   title: "La Casa Violeta",           prefix: "casa-violeta",    n: 4 },
-    { id: "where-wild-things", title: "Where the Wild Things Are", prefix: "wild-things",     n: 4 },
-    { id: "pocket-pieces",     title: "Pocket Pieces",             prefix: "pocket-pieces",   n: 26 },
-    { id: "zodrak",            title: "Zodrak",                    prefix: "zodrak",          n: 15 },
-    { id: "two-plus-one",      title: "2i1",                       prefix: "2i1",             n: 3 },
-    { id: "restuchemistry",    title: "Restuchemistry",            prefix: "restuchemistry",  n: 2 },
-    { id: "juice",             title: "Juice",                    prefix: "juice",          n: 12 }
+
+    /* =====================================================
+       FILM — PCLOUD
+       ===================================================== */
+
+    {
+        id: "commercial",
+        title: "Commercial",
+
+        /* PCLOUD — TU WKLEJASZ LINKI DO FILMÓW */
+
+        files: [
+            "https://filedn.eu/liFl4DsfQDlb6Ula1NCBo4y/Natalia_Przybysz_OGIEN_1920x1080_BEZcenzury_online_ProResHQ-20Mbps_napisy_v2.mp4"
+        ]
+    },
+
+    {
+        id: "music-video",
+        title: "Music video",
+
+        /* PCLOUD — TU WKLEJASZ LINKI DO FILMÓW */
+
+        files: [
+            /* "https://filedn.eu/...../film.mp4", */
+            /* "https://filedn.eu/...../film2.mp4" */
+        ]
+    },
+
+    {
+        id: "social",
+        title: "Social campaign",
+
+        /* PCLOUD — TU WKLEJASZ LINKI DO FILMÓW */
+
+        files: [
+            /* "https://filedn.eu/...../film.mp4", */
+            /* "https://filedn.eu/...../film2.mp4" */
+        ]
+    },
+
+
+    /* =====================================================
+       PHOTOGRAPHY
+       ===================================================== */
+
+    {
+        id: "commercial-photo",
+        title: "Commercial folio",
+        prefix: "commercial",
+        n: 4
+    },
+
+    {
+        id: "la-casa-violeta",
+        title: "La Casa Violeta",
+        prefix: "casa-violeta",
+        n: 4
+    },
+
+    {
+        id: "where-wild-things",
+        title: "Where the Wild Things Are",
+        prefix: "wild-things",
+        n: 4
+    },
+
+    {
+        id: "pocket-pieces",
+        title: "Pocket Pieces",
+        prefix: "pocket-pieces",
+        n: 26
+    },
+
+    {
+        id: "zodrak",
+        title: "Zodrak",
+        prefix: "zodrak",
+        n: 15
+    },
+
+    {
+        id: "two-plus-one",
+        title: "2i1",
+        prefix: "2i1",
+        n: 3
+    },
+
+    {
+        id: "restuchemistry",
+        title: "Restuchemistry",
+        prefix: "restuchemistry",
+        n: 2
+    },
+
+    {
+        id: "juice",
+        title: "Juice",
+        prefix: "juice",
+        n: 12
+    }
+
 ];
 
-const DEFAULT_VIEW = "commercial-photo";
-const VIDEO_RE = /\.(mp4|webm|mov)$/i;
-const VIMEO_RE = /vimeo\.com\/(?:video\/)?(\d+)(?:\/([a-z0-9]+))?/i;
 
-/* Gdzie leżą zdjęcia: "" = obok index.html, "images/" = w folderze images */
+const DEFAULT_VIEW = "commercial-photo";
+
+const VIDEO_RE = /\.(mp4|webm|mov)$/i;
+
+const VIMEO_RE =
+    /vimeo\.com\/(?:video\/)?(\d+)(?:\/([a-z0-9]+))?/i;
+
+
+/* Gdzie leżą zdjęcia */
+
 const IMG_DIR = "images/";
 
 const main = document.getElementById("content");
 
+
+/* =========================================================
+   LISTA PLIKÓW
+   ========================================================= */
+
 function fileList(p) {
-    if (p.files) return p.files;
-    return Array.from({ length: p.n }, (_, i) =>
-        `${IMG_DIR}${p.prefix}-${String(i + 1).padStart(2, "0")}.jpg`);
+
+    if (p.files) {
+        return p.files;
+    }
+
+    return Array.from(
+        { length: p.n },
+        (_, i) =>
+            `${IMG_DIR}${p.prefix}-${String(i + 1).padStart(2, "0")}.jpg`
+    );
 }
 
-/* budowanie projektów */
+
+/* =========================================================
+   BUDOWANIE PROJEKTÓW
+   ========================================================= */
+
 PROJECTS.forEach(p => {
+
     const view = document.createElement("div");
+
     view.className = "view";
     view.id = p.id;
 
+
     const title = document.createElement("h2");
+
     title.className = "project-title";
     title.textContent = p.title;
 
+
     const gallery = document.createElement("div");
+
     gallery.className = "project-images";
 
+
     fileList(p).forEach((src, i) => {
+
         let el;
+
+
+        /* VIMEO */
+
         const vm = src.match(VIMEO_RE);
+
         if (vm) {
+
             el = document.createElement("iframe");
-            el.dataset.src = "https://player.vimeo.com/video/" + vm[1] + (vm[2] ? "?h=" + vm[2] : "");
-            el.allow = "autoplay; fullscreen; picture-in-picture";
+
+            el.dataset.src =
+                "https://player.vimeo.com/video/" +
+                vm[1] +
+                (vm[2] ? "?h=" + vm[2] : "");
+
+            el.allow =
+                "autoplay; fullscreen; picture-in-picture";
+
             el.allowFullscreen = true;
-            el.title = `${p.title} — film ${i + 1}`;
-        } else if (VIDEO_RE.test(src)) {
-            el = document.createElement("video");
-            el.src = src;
-            el.controls = true;
-            el.playsInline = true;
-            el.preload = "metadata";
-            el.setAttribute("aria-label", `${p.title} — film ${i + 1}`);
-        } else {
-            el = document.createElement("img");
-            el.src = src;
-            el.alt = `${p.title} — zdjęcie ${i + 1}`;
-            el.decoding = "async";
-            el.loading = i === 0 ? "eager" : "lazy";
+
+            el.title =
+                `${p.title} — film ${i + 1}`;
+
         }
+
+
+        /* MP4 / WEBM / MOV
+           w tym bezpośrednie linki z pCloud
+        */
+
+        else if (VIDEO_RE.test(src)) {
+
+            el = document.createElement("video");
+
+            el.src = src;
+
+            el.controls = true;
+
+            el.playsInline = true;
+
+            el.preload = "metadata";
+
+            el.setAttribute(
+                "aria-label",
+                `${p.title} — film ${i + 1}`
+            );
+
+        }
+
+
+        /* ZDJĘCIA */
+
+        else {
+
+            el = document.createElement("img");
+
+            el.src = src;
+
+            el.alt =
+                `${p.title} — zdjęcie ${i + 1}`;
+
+            el.decoding = "async";
+
+            el.loading =
+                i === 0 ? "eager" : "lazy";
+        }
+
+
         gallery.appendChild(el);
+
     });
 
-    /* kółko myszy przewija galerię poziomo, strzałki też */
+
+    /* KÓŁKO MYSZY → POZIOMY SCROLL */
+
     gallery.tabIndex = 0;
-    gallery.addEventListener("wheel", e => {
-        if (e.shiftKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-        if (gallery.scrollWidth <= gallery.clientWidth) return;
-        e.preventDefault();
-        gallery.scrollLeft += e.deltaY;
-    }, { passive: false });
-    gallery.addEventListener("keydown", e => {
-        if (e.key === "ArrowRight") gallery.scrollBy({ left: gallery.clientWidth * 0.8, behavior: "smooth" });
-        if (e.key === "ArrowLeft")  gallery.scrollBy({ left: -gallery.clientWidth * 0.8, behavior: "smooth" });
-    });
+
+    gallery.addEventListener(
+        "wheel",
+        e => {
+
+            if (
+                e.shiftKey ||
+                Math.abs(e.deltaX) > Math.abs(e.deltaY)
+            ) {
+                return;
+            }
+
+            if (
+                gallery.scrollWidth <=
+                gallery.clientWidth
+            ) {
+                return;
+            }
+
+            e.preventDefault();
+
+            gallery.scrollLeft += e.deltaY;
+
+        },
+        { passive: false }
+    );
+
+
+    /* STRZAŁKI */
+
+    gallery.addEventListener(
+        "keydown",
+        e => {
+
+            if (e.key === "ArrowRight") {
+
+                gallery.scrollBy({
+                    left: gallery.clientWidth * 0.8,
+                    behavior: "smooth"
+                });
+
+            }
+
+            if (e.key === "ArrowLeft") {
+
+                gallery.scrollBy({
+                    left: -gallery.clientWidth * 0.8,
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
+    );
+
 
     view.append(title);
+
+
     if (p.desc) {
-        const desc = document.createElement("div");
+
+        const desc =
+            document.createElement("div");
+
         desc.className = "project-desc";
+
         desc.textContent = p.desc;
+
         view.append(desc);
+
     }
+
+
     view.append(gallery);
-    main.insertBefore(view, document.getElementById("prints"));
+
+
+    main.insertBefore(
+        view,
+        document.getElementById("prints")
+    );
+
 });
 
-/* wyświetlanie widoku na podstawie #hash */
-const views = document.querySelectorAll(".view");
-const menuSections = document.querySelectorAll(".menu-section");
-const homeLink = document.getElementById("home-link");
+
+/* =========================================================
+   WYŚWIETLANIE WIDOKU
+   ========================================================= */
+
+const views =
+    document.querySelectorAll(".view");
+
+const menuSections =
+    document.querySelectorAll(".menu-section");
+
+const homeLink =
+    document.getElementById("home-link");
+
 
 function show() {
-    const id = decodeURIComponent(location.hash.slice(1)) || DEFAULT_VIEW;
-    const target = document.getElementById(id);
-    const isView = target && target.classList.contains("view");
-    const activeId = isView ? id : DEFAULT_VIEW;
 
-    /* zatrzymaj filmy w ukrytych projektach */
+    const id =
+        decodeURIComponent(
+            location.hash.slice(1)
+        ) || DEFAULT_VIEW;
+
+
+    const target =
+        document.getElementById(id);
+
+
+    const isView =
+        target &&
+        target.classList.contains("view");
+
+
+    const activeId =
+        isView ? id : DEFAULT_VIEW;
+
+
+    /* zatrzymaj filmy
+       w ukrytych projektach */
+
     views.forEach(v => {
-        const on = v.id === activeId;
-        v.classList.toggle("active", on);
-        if (!on) v.querySelectorAll("video").forEach(m => m.pause());
-        v.querySelectorAll("iframe").forEach(f => {
-            const want = on ? f.dataset.src : "about:blank";
-            if (f.getAttribute("src") !== want) f.setAttribute("src", want);
-        });
+
+        const on =
+            v.id === activeId;
+
+
+        v.classList.toggle(
+            "active",
+            on
+        );
+
+
+        if (!on) {
+
+            v.querySelectorAll("video")
+                .forEach(m => m.pause());
+
+        }
+
+
+        /* Vimeo */
+
+        v.querySelectorAll("iframe")
+            .forEach(f => {
+
+                const want =
+                    on
+                        ? f.dataset.src
+                        : "about:blank";
+
+
+                if (
+                    f.getAttribute("src") !== want
+                ) {
+
+                    f.setAttribute(
+                        "src",
+                        want
+                    );
+
+                }
+
+            });
+
     });
 
-    /* podświetlenie i rozwinięcie menu */
-    document.querySelectorAll(".menu a").forEach(a => a.classList.remove("current"));
-    const link = document.querySelector(`.menu a[href="#${activeId}"]`);
-    if (link) link.classList.add("current");
 
-    menuSections.forEach(s => s.classList.remove("active"));
+    /* podświetlenie menu */
+
+    document
+        .querySelectorAll(".menu a")
+        .forEach(a =>
+            a.classList.remove("current")
+        );
+
+
+    const link =
+        document.querySelector(
+            `.menu a[href="#${activeId}"]`
+        );
+
+
     if (link) {
-        const section = link.closest(".menu-section");
-        if (section && section.querySelector(".submenu")) section.classList.add("active");
+        link.classList.add("current");
     }
 
-    window.scrollTo({ top: 0 });
+
+    /* rozwinięcie odpowiedniej sekcji */
+
+    menuSections.forEach(
+        s => s.classList.remove("active")
+    );
+
+
+    if (link) {
+
+        const section =
+            link.closest(".menu-section");
+
+
+        if (
+            section &&
+            section.querySelector(".submenu")
+        ) {
+
+            section.classList.add("active");
+
+        }
+
+    }
+
+
+    window.scrollTo({
+        top: 0
+    });
+
 }
 
-/* rozwijanie sekcji menu (Film / Photography) */
+
+/* =========================================================
+   FILM / PHOTOGRAPHY — ROZWIJANIE MENU
+   ========================================================= */
+
 menuSections.forEach(section => {
-    const toggle = section.querySelector(".menu-toggle");
-    if (!section.querySelector(".submenu")) return; /* Prints i Contact to zwykłe linki */
-    toggle.addEventListener("click", e => {
+
+    const toggle =
+        section.querySelector(".menu-toggle");
+
+
+    if (
+        !section.querySelector(".submenu")
+    ) {
+        return;
+    }
+
+
+    toggle.addEventListener(
+        "click",
+        e => {
+
+            e.preventDefault();
+
+
+            const wasActive =
+                section.classList.contains(
+                    "active"
+                );
+
+
+            menuSections.forEach(
+                s =>
+                    s.classList.remove("active")
+            );
+
+
+            if (!wasActive) {
+
+                section.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   ANIA BAJOREK
+   ========================================================= */
+
+homeLink.addEventListener(
+    "click",
+    e => {
+
         e.preventDefault();
-        const wasActive = section.classList.contains("active");
-        menuSections.forEach(s => s.classList.remove("active"));
-        if (!wasActive) section.classList.add("active");
-    });
-});
 
-homeLink.addEventListener("click", e => {
-    e.preventDefault();
-    if (location.hash) history.pushState(null, "", location.pathname);
-    show();
-});
 
-window.addEventListener("hashchange", show);
+        if (location.hash) {
+
+            history.pushState(
+                null,
+                "",
+                location.pathname
+            );
+
+        }
+
+
+        show();
+
+    }
+);
+
+
+/* =========================================================
+   HASH
+   ========================================================= */
+
+window.addEventListener(
+    "hashchange",
+    show
+);
+
+
 show();
+
 </script>
 
 </body>
